@@ -2,26 +2,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import Products from "./pages/Products";
-import StockIn from "./pages/StockIn";
-import StockOut from "./pages/StockOut";
+import Employees from "./pages/Employees";
+import Departments from "./pages/Departments";
+import JobRoles from "./pages/JobRoles";
 import Reports from "./pages/Reports";
-import ProtectedRoute from "./components/ProtectedRoute";
-
-function App () {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path="/products" element={<ProtectedRoute><Products /></ProtectedRoute>} />
-        <Route path="/stockin" element={<ProtectedRoute><StockIn /></ProtectedRoute>} />
-        <Route path="/stockout" element={<ProtectedRoute><StockOut /></ProtectedRoute>} />
-        <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/employees" element={<Employees />} />
+        <Route path="/departments" element={<Departments />} />
+        <Route path="/jobroles" element={<JobRoles />} />
+        <Route path="/reports" element={<Reports />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;
